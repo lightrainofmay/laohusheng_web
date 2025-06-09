@@ -14,7 +14,7 @@ def render(lang):
         lang
     ))
 
-    image_path = "assets/tiger_reference.png"
+    image_path = "assets/tiger_reference.PNG"
     if os.path.exists(image_path):
         st.image(image_path, caption=_("\u793a\u4f8b\u56fe", "Example", lang), width=300)
     else:
