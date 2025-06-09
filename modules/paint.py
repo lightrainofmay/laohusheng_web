@@ -21,7 +21,7 @@ def render(lang):
         st.warning(_("无法找到 tiger_reference.png 图片", "Reference image not found.", lang))
 
     # 加载底图 base64
-    with open("assets/paint_base_tiger.png", "rb") as f:
+    with open("assets/paint_base_tiger.PNG", "rb") as f:
         base_img_data = base64.b64encode(f.read()).decode()
     base_img_url = f"data:image/png;base64,{base_img_data}"
 
