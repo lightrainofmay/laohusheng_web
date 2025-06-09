@@ -1,11 +1,12 @@
 import streamlit as st
 import base64
+import os
 
 def _(zh, en, lang):
     return zh if lang == "中文" else en
 
 def render(lang):
-    st.header(_("为老虎队员化妆", "Paint the Tiger Face", lang))
+    st.header(_(为老虎队员化妆", "Paint the Tiger Face", lang))
 
     st.markdown(_(
         "使用颜色选择器与画笔工具在下方图像上绘制虎纹，点击“保存”即可下载到本地，然后请到展示页上传。",
@@ -13,16 +14,20 @@ def render(lang):
         lang
     ))
 
-    st.image("assets/tiger_reference.png", caption=_("示例图", "Example", lang), width=300)
+    image_path = "assets/tiger_reference.png"
+    if os.path.exists(image_path):
+        st.image(image_path, caption=_("\u793a\u4f8b\u56fe", "Example", lang), width=300)
+    else:
+        st.warning(_(“无法找到 tiger_reference.png 图片”, "Reference image not found.", lang))
 
     # 加载底图 base64
     with open("assets/paint_base_tiger.png", "rb") as f:
         base_img_data = base64.b64encode(f.read()).decode()
     base_img_url = f"data:image/png;base64,{base_img_data}"
 
-    selected_color = st.color_picker(_("请选择画笔颜色", "Choose Brush Color", lang), "#ff9900")
+    selected_color = st.color_picker(_(“请选择画笔颜色", "Choose Brush Color", lang), "#ff9900")
 
-    st.markdown("### 👇 点击下方鼓图开始绘画")
+    st.markdown("### 👇 点击下方图开始绘画")
 
     st.components.v1.html(f"""
     <html>
@@ -33,8 +38,8 @@ def render(lang):
           style="border:1px solid #000;">
         </canvas>
         <br><br>
-        <button onclick="clearCanvas()">🧼 清除</button>
-        <button onclick="saveCanvas()">💾 保存图片</button>
+        <button onclick="clearCanvas()">🪜 清除</button>
+        <button onclick="saveCanvas()">📏 保存图片</button>
 
         <script>
         const canvas = document.getElementById('tigerCanvas');

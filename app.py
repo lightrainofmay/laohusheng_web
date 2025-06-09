@@ -40,7 +40,7 @@ elif selected_page == "home":
             st.markdown("---")
             st.markdown("""
             <div style='font-size:14px; color: #555; line-height: 1.6;'>
-                <strong>制作者：</strong> 张怡、XXX、XXX<br>
+                <strong>制作者：</strong> 张怡，奎卓然，李欣欣，李妍妍，李亚辉<br>
                 <strong>指导教师：</strong> 周晓宇
             </div>
             """, unsafe_allow_html=True)
@@ -51,7 +51,7 @@ elif selected_page == "home":
             st.markdown("---")
             st.markdown("""
             <div style='font-size:14px; color: #555; line-height: 1.6;'>
-                <strong>Created by:</strong> Yang Xiaoxuan, XXX, XXX<br>
+                <strong>Created by:</strong> Zhang Yi, Kui Zhuoran, Li xinxin, Li Yanyan, Li Yahui<br>
                 <strong>Instructor:</strong> Zhou Xiaoyu
             </div>
             """, unsafe_allow_html=True)
