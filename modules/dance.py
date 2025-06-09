@@ -38,7 +38,7 @@ def render(lang):
             "file": "assets/tiger_kiss.mp4",
             "title": _("老虎亲嘴", "Tiger Kissing", lang),
             "desc": _(
-                "两虎面对面，前掌相对，左右扭动，象征钦慕物件。",
+                "两虎面对面，前掌相对，左右扭动，象征钦慕无间。",
                 "Two tigers face each other, bow slightly and touch paws—symbolizing intimacy and unity.",
                 lang
             )
