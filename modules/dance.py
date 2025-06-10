@@ -35,6 +35,15 @@ def render(lang):
             )
         },
         {
+            "file": "assets/tiger_mating.mp4",
+            "title": _("老虎交尾", "Tiger Mating", lang),
+            "desc": _(
+                "两虎前后相随，模拟动物交配动作，象征生命延续与族群繁衍。",
+                "Two tigers move in a mating posture—symbolizing continuity of life and reproduction of the community.",
+                lang
+            )
+        },
+        {
             "file": "assets/tiger_kiss.mp4",
             "title": _("老虎亲嘴", "Tiger Kissing", lang),
             "desc": _(
@@ -52,9 +61,7 @@ def render(lang):
                 lang
             )
         }
-
     ]
-
 
     for anim in animations:
         st.markdown(f"### {anim['title']}")
